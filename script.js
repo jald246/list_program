@@ -1,7 +1,6 @@
 // NOTE: PLEASE READ EACH INSTRUCTION COMMENT CAREFULLY TO HELP YOU PROCESS THIS PROJECT
 // IF YOU ARE STUCK ASK AN INSTRUCTOR FOR HELP, ALWAYS WRITE THE CODE BELOW THE ASSIGNMENTS.
 
-
 productArray = [];
 function addProduct() {
   // Assignment 1
@@ -23,12 +22,13 @@ function addProduct() {
   // If the code you will want to run after checking the condition is to run the alert method.
   // If you do not know the alert method, look it up on google using the w3schools,
   // do not forget to include a return false at the end to not reload your webpage.
-    if (input === "") {
-      alert("Please enter a product")
-    return false};
+  if (input === "") {
+    alert("Please enter a product");
+    return false;
+  }
   // Assignment 2:
   // You need to put the value of the input into an array to call later.
- // That means you will need to assign your input using brackets around it
+  // That means you will need to assign your input using brackets around it
   // to a newProduct variable, remember that assign can mean the equals sign(=).
 
   let newProduct = { product: input };
@@ -49,14 +49,14 @@ function addProduct() {
   document.getElementById("product").value = "";
   // then set the output div to display block, its normally set to none, which means invisible
   // This means that you need to get your output variable use dot notation to set style.display = "block"
-  output.style.display = "block"
+  output.style.display = "block";
   output.innerHTML = "";
   // set the div.textContent equal to the the array index number [i] and dot notation of the product
   // `${productArray[i].your input}`
   for (let i = 0; i < productArray.length; i++) {
-    let itemDIV = document.createElement("div")
+    let itemDIV = document.createElement("div");
     itemDIV.textContent = `${productArray[i].product}`;
-    output.appendChild(itemDIV)
+    output.appendChild(itemDIV);
   }
   // finally use the appendChild method from the output variable you had from earlier.
   // output.appendChild(yourdivnamehere)
